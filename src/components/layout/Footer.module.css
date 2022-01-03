@@ -1,0 +1,199 @@
+.footer {
+  width: 100%;
+  padding: 0 2.2rem 0 2.2rem;
+}
+
+.footer__top--titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 60px;
+  width: 100%;
+}
+.footer__top--titles > h1 {
+  margin-top: 18px;
+  font-size: 3.875rem;
+  line-height: 4rem;
+  padding: 5px 0px 5px;
+  margin-bottom: 100px;
+}
+
+.footer__top--titles > h1 > a {
+  color: black;
+  font-weight: bold;
+}
+
+.footer__top--titles > p {
+  margin-top: 100px;
+
+  color: #878a8f;
+  letter-spacing: 0.4em;
+  font-weight: 400;
+}
+.footer__top--titles > h1 > a > span {
+  margin-left: 10px;
+}
+
+.footer__bottom--container {
+  border-top: 2px solid rgba(182, 176, 176, 0.3);
+
+  width: 100%;
+  height: 72.24vh;
+  padding: 50px 0;
+}
+
+.footer__bottomTop--container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.contactInformationTitles {
+  width: 35%;
+  height: 200px;
+}
+
+.contactInformationTitles h3,
+.footer__projects h3,
+.avilability__title--footer h3,
+.social__links--footer h3 {
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+}
+
+.contactInformationTitles h4 {
+  padding: 5px 0;
+}
+
+.contactInformationTitles h3::after,
+.footer__projects h3::after,
+.avilability__title--footer h3::after,
+.social__links--footer h3::after {
+  content: "";
+  position: absolute;
+  bottom: 9px;
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  margin-left: 10px;
+}
+
+.contactInformationTitles p {
+  font-size: 16px;
+  color: #878a8f;
+  line-height: 1.4rem;
+  margin: 15px 0px 15px;
+  font-weight: 500;
+}
+.contactInformationTitles h4 {
+  color: #878a8f;
+  margin: 5px 0px 5px;
+}
+.contactInformationTitles h4 span a {
+  color: black;
+
+  position: relative;
+  padding: 5px 0;
+}
+.footer__projects {
+  height: 200px;
+}
+
+.footer__projects ul li,
+.social__links--footer ul li {
+  margin: 13px 0px 13px;
+}
+.social__links--footer ul {
+  display: flex;
+  flex-direction: column;
+}
+.footer__projects ul li {
+  padding: 5px 0;
+}
+.footer__projects ul li a {
+  position: relative;
+  color: black;
+  opacity: 1;
+  padding: 5px 0;
+}
+
+.social__links--footer ul li a {
+  color: black;
+  opacity: 1;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.5s;
+}
+
+.social__links--footer ul li a::after,
+.footer__projects ul li a::after,
+.contactInformationTitles h4 span a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  background-color: grey;
+  transition: all 0.5s;
+}
+.social__links--footer ul li a:hover::after,
+.footer__projects ul li a:hover::after,
+.contactInformationTitles h4 span a:hover::after {
+  transform: scaleX(1);
+}
+
+.avilability__title--footer,
+.social__links--footer {
+  width: 15%;
+  height: 200px;
+}
+
+.avilability__title--footer p {
+  margin-top: 20px;
+  color: #878a8f;
+  line-height: 22px;
+}
+
+.logoGreyVersion {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  transition: opacity 0.3s ease-out;
+}
+.logoImageGrey {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid grey;
+  display: flex;
+  justify-content: center;
+  color: grey;
+  cursor: pointer;
+  opacity: 0.5;
+  align-items: center;
+  font-weight: bold;
+  font-size: 35px;
+}
+.logo__name {
+  padding: 10px;
+}
+
+.logo__name h2 {
+  font-size: 13px;
+  color: #878a8f;
+  line-height: 30px;
+}
+.logo__name p {
+  color: #878a8f;
+  font-size: 13px;
+}

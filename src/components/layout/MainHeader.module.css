@@ -1,0 +1,79 @@
+.main__header {
+  width: 100%;
+}
+
+.main__header--wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 2.2rem 2.2rem 0 2.2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__header--image img {
+  height: 720px;
+  background-color: red;
+}
+
+.main__header--titles {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main__header--titles h4 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #878a8f;
+  margin-bottom: 15px;
+}
+
+.main__header--titles h1 {
+  font-size: 70px;
+  font-weight: bold;
+  color: #0f141e;
+  line-height: 80px;
+}
+
+.main__header--titles p {
+  color: #878a8f;
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.viewProjects,
+.readAboutMe {
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 0;
+}
+.or {
+  color: #878a8f;
+  font-size: 15px;
+  margin: 10px;
+  padding: 10px 0;
+}
+
+.viewProjects::after,
+.readAboutMe::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 2px;
+  left: 0;
+  background-color: #878a8f;
+  transform-origin: bottom right;
+  transition: transform 0.4s linear;
+}
+.viewProjects:hover::after,
+.readAboutMe:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
