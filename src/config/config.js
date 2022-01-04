@@ -12,6 +12,10 @@ import codingLogo from "../assets/codinglogo.jpg";
 import skydivingLogo from "../assets/skydiving.jpg";
 import snowBoardingLogo from "../assets/snowboarding.jpg";
 import skyiingLogo from "../assets/skyiing.jpg";
+
+export const MESSAGE_URL =
+  "https://portfolio-42f27-default-rtdb.firebaseio.com/messages.json";
+
 export const DUMMY_SOCIAL_LINKS = [
   {
     id: "l1",

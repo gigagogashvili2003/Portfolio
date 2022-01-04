@@ -1,0 +1,181 @@
+.contactMeContainer {
+  width: 100%;
+}
+
+.contactTopContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contactTitles h1 {
+  font-family: "Helvetica Now Display DW", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #0f141e;
+  font-size: 60px;
+  line-height: 70px;
+}
+.contactTitles p {
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  font-size: 0.875rem;
+  color: #878a8f;
+  line-height: 1.25rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.contactImage {
+  max-width: 600px;
+  width: 100%;
+  min-height: 600px;
+  background-image: url("../assets/nft.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.contactFormContainer {
+  width: 100%;
+  margin-top: 100px;
+}
+.contactFormContainer h2 {
+  font-family: "Helvetica Now Display DW", sans-serif;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: #0f141e;
+  font-size: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.contactFormContainer > form {
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.nameContainer,
+.emailContainer,
+.serviceContainer,
+.budgetContainer,
+.messageContainer {
+  width: 50%;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messageContainer {
+  padding: 25px 20px;
+  width: 100%;
+}
+.contactFormContainer > form label {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #878a8f;
+  letter-spacing: 0.03em;
+}
+
+.nameContainer > input,
+.emailContainer > input,
+.messageContainer textarea {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 50px;
+  padding: 5px 0;
+  font-size: 20px;
+  transition: all 0.3s ease-out;
+  border-radius: 5px;
+
+  border-bottom: 2px solid rgba(177, 177, 177, 0.5);
+}
+
+.messageContainer > textarea {
+  padding: 14px 0;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.nameContainer > input::placeholder,
+.emailContainer > input::placeholder,
+.messageContainer > textarea::placeholder {
+  color: black;
+}
+
+.serviceContainer > select,
+.budgetContainer > select {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 50px;
+  padding: 5px 0;
+  padding-left: 20px;
+  border: 2px solid rgba(177, 177, 177, 0.5);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  border-radius: 5px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 25px 20px;
+}
+
+.buttonContainer button {
+  width: 30%;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 20px 20px;
+  font-size: 17px;
+
+  border: 2px solid rgba(177, 177, 177, 0.5);
+  border-radius: 0.45rem;
+  transition: all 0.3s ease-out;
+}
+.buttonContainer button:hover {
+  outline: none;
+  border-color: #240370;
+  background-color: #e0d4fd;
+}
+
+.nameContainer input:focus,
+.emailContainer input:focus,
+.serviceContainer select:focus,
+.budgetContainer select:focus,
+.messageContainer textarea:focus .buttonContainer button:focus {
+  outline: none;
+  border: 2px solid #240370;
+  background-color: #e0d4fd;
+}
+
+.invalid input,
+.invalid > select,
+.invalid > textarea,
+.invalid > button {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+}
+
+.invalid input:focus,
+.invalid > select:focus,
+.invalid > textarea:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
+
+.error-text {
+  margin-top: 10px;
+  color: #b40e0e;
+}
