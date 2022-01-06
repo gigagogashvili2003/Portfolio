@@ -3,16 +3,16 @@ import myImage2 from "../assets/my__image2.jpg";
 import myFlip from "../assets/myflip.jpg";
 import { DUMMY_HOBBIES } from "../config/config";
 import List from "../components/lists/List";
+
 const AboutMe = () => {
   const hobbiesContent = DUMMY_HOBBIES.map((hobbie) => (
-    <List>
+    <List key={hobbie.name}>
       <div
         style={{ backgroundImage: `url(${hobbie.imageUrl})` }}
         className={classes["hobbie__photo"]}
       >
         <div>
           <h2>{hobbie.name}</h2>
-          <p>{hobbie.paragraph}</p>
         </div>
       </div>
     </List>
@@ -21,7 +21,7 @@ const AboutMe = () => {
   return (
     <div className={classes["about__me--container"]}>
       <section className={classes["aboutMe__section1"]}>
-        <img src={myImage2} alt="My image" />
+        <img src={myImage2} />
         <div className={classes["aboutMe__titles--container"]}>
           <h1>About me</h1>
           <p>

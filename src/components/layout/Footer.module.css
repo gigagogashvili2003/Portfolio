@@ -1,6 +1,14 @@
 .footer {
   width: 100%;
   padding: 0 2.2rem 0 2.2rem;
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+  transition: all 0.7s linear;
+}
+.inView {
+  opacity: 1;
+  visibility: visible;
 }
 
 .footer__top--titles {

@@ -1,27 +1,34 @@
 .Notification {
+  width: 30%;
   color: white;
-  padding: 20px;
+  text-align: center;
+  padding: 30px;
   font-weight: bold;
-  font-size: 18px;
-  border-radius: 7px;
-  background-color: #240370;
-  position: absolute;
+  font-size: 20px;
+  border-radius: 0px 0px 15px 15px;
+  background-color: #4e42d4;
+  position: fixed;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  animation: notification 7s forwards;
+  animation: notification 10s forwards;
 }
 
 @keyframes notification {
   0% {
-    opacity: 0;
-    visibility: hidden;
+    top: -100%;
+    visibility: none;
   }
-  75% {
-    opacity: 1;
+  15% {
+    top: 0;
+    visibility: visible;
+  }
+  85% {
+    top: 0;
     visibility: visible;
   }
   100% {
-    opacity: 0;
+    top: -100%;
     visibility: hidden;
   }
 }

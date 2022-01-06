@@ -8,54 +8,11 @@
   margin-bottom: 20px;
 }
 .techSkills__section1 h1 {
-  font-size: 50px;
-  font-weight: bold;
+  font-family: "Helvetica Now Display DW", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #0f141e;
+  font-size: 60px;
   text-align: center;
-}
-
-.listItem {
-  width: 80%;
-  height: 15rem;
-  margin: 20px;
-  padding: 30px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border: 3px solid rgba(177, 177, 177, 0.2);
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-  border-radius: 15px;
-  position: relative;
-  transition: all 0.3s ease-out;
-}
-
-.listItem:hover {
-  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.listItem div {
-  display: flex;
-  align-items: center;
-}
-.listItem img {
-  margin-left: 20px;
-  height: 40px;
-}
-
-.listItem h2 {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.listItem p {
-  color: #878a8f;
-  font-size: 17px;
-  line-height: 20px;
-}
-
-.listItem h3 {
-  font-size: 15px;
-  color: #878a8f;
-  font-weight: bold;
+  line-height: 70px;
 }

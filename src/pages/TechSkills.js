@@ -1,19 +1,20 @@
 import List from "../components/lists/List";
-import ListItem from "../components/lists/ListItem";
+import TechSkillsList from "../components/lists/TechSkillsList";
 import classes from "./TechSkills.module.css";
 
 import { DUMMY_TECH_SKILLS } from "../config/config";
 
 const TechSkills = () => {
   const techSkillsContent = DUMMY_TECH_SKILLS.map((techSkill) => (
-    <ListItem
+    <TechSkillsList
       className={classes.listItem}
       key={techSkill.id}
+      inview={classes.inView}
       name={techSkill.name}
       imageUrl={techSkill.imageUrl}
-      level={techSkill.level}
-      paragraph={techSkill.paragraph}
       experience={techSkill.experience}
+      level={techSkill.level}
+      backgroundColor={techSkill.backgroundColor}
     />
   ));
 

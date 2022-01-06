@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import useInput from "../hooks/use-input";
 import classes from "./ContactMe.module.css";
 
@@ -6,8 +6,14 @@ import Spinner from "../components/UI/Spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMessageData } from "../store/message-actions";
 import Notification from "../components/UI/Notification";
-
+import { useInView } from "react-intersection-observer";
+import ReCAPTCHA from "react-google-recaptcha";
+let recaptchaBoolean = false;
 const ContactMe = () => {
+  const recaptchaKey = "6LdCQPUdAAAAAN__4hjSQwBkl2Khjf98-S2UmzS6";
+  const [recaptcha, setRecaptcha] = useState(false);
+  let recaptchaRef = useRef();
+  const [recaptchaToken, setRecaptchaToken] = useState("");
   const dispatch = useDispatch();
   const messageActions = useSelector((state) => state.fetchSlice.notification);
 
@@ -61,12 +67,16 @@ const ContactMe = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
+    if (!recaptcha) {
+      recaptchaBoolean = true;
+    }
     if (
       !enteredNameIsValid ||
       !enteredEmailIsValid ||
       !enteredServiceIsValid ||
       !enteredBudgetIsValid ||
-      !enteredMessageIsValid
+      !enteredMessageIsValid ||
+      !recaptcha
     ) {
       setFormIsValid(false);
       return;
@@ -88,6 +98,10 @@ const ContactMe = () => {
     serviceReset();
     budgetReset();
     messageReset();
+    if (!recaptcha) return;
+    recaptchaRef.reset();
+    setRecaptcha(false);
+    recaptchaBoolean = false;
   };
 
   const nameInputClasses = [
@@ -115,11 +129,22 @@ const ContactMe = () => {
 
   const buttonClasses = [
     classes.buttonContainer,
-    !formIsValid ? classes.invalid : "",
+    !formIsValid && !recaptcha && recaptchaBoolean ? classes.invalid : "",
   ];
 
+  const [ref, inView, entry] = useInView({
+    /* Optional options */
+    threshold: 0,
+    triggerOnce: true,
+  });
+
+  const submitRecaptchaHandler = (token) => {
+    setRecaptchaToken(token);
+    setRecaptcha(true);
+  };
+
   return (
-    <div className={classes.contactMeContainer}>
+    <div className={`${classes.contactMeContainer}`}>
       <div className={classes.contactTopContainer}>
         <div className={classes.contactTitles}>
           <p>CONTACT</p>
@@ -130,9 +155,13 @@ const ContactMe = () => {
         </div>
         <div className={classes.contactImage}></div>
       </div>
-      <div className={classes.contactFormContainer}>
+      <div
+        className={`${classes.contactFormContainer} ${
+          inView && classes.inView
+        } `}
+      >
         <h2>Contact</h2>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} ref={ref} className={`${classes.form}`}>
           <div className={nameInputClasses.join(" ")}>
             <label htmlFor="formName">Your Name</label>
             <input
@@ -238,9 +267,26 @@ const ContactMe = () => {
               </p>
             )}
           </div>
+          <div
+            className={`${classes.recaptchaContainer} ${
+              !recaptcha && recaptchaBoolean ? classes.invalidRecaptcha : ""
+            }`}
+          >
+            <ReCAPTCHA
+              ref={(e) => (recaptchaRef = e)}
+              sitekey={recaptchaKey}
+              onChange={submitRecaptchaHandler}
+            ></ReCAPTCHA>
+            {!recaptcha && recaptchaBoolean && (
+              <p className={classes["error-text"]}>
+                Please verify that you are not a robot.
+              </p>
+            )}
+          </div>
+
           <div className={buttonClasses.join(" ")}>
             <button>Send Message</button>
-            {!formIsValid && (
+            {!formIsValid && !recaptcha && recaptchaBoolean && (
               <p className={classes["error-text"]}>
                 Make sure you got all the fields right!
               </p>

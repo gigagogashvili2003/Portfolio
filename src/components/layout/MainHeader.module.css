@@ -11,8 +11,9 @@
   align-items: center;
 }
 .main__header--image img {
-  height: 720px;
-  background-color: red;
+  height: 600px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
 }
 
 .main__header--titles {

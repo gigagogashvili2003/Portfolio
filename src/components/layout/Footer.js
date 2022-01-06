@@ -2,6 +2,7 @@ import classes from "./Footer.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { DUMMY_SOCIAL_LINKS } from "../../config/config";
 import { DUMMY_PROJECTS_TITLES } from "../../config/config";
+import { useInView } from "react-intersection-observer";
 // Material UI icon imports
 import EastIcon from "@mui/icons-material/East";
 const Footer = () => {
@@ -22,9 +23,16 @@ const Footer = () => {
       <a href={projectTitle.link}>{projectTitle.name}</a>
     </li>
   ));
+  const [ref, inView, entry] = useInView({
+    /* Optional options */
+    threshold: 0.2,
+  });
 
   return (
-    <footer className={classes.footer}>
+    <footer
+      ref={ref}
+      className={`${classes.footer} ${inView ? classes.inView : ""}`}
+    >
       <div className={classes["footer__top--titles"]}>
         <p>NEED A JUNIOUR FRONT END DEVELOPER ?</p>
         <h1>

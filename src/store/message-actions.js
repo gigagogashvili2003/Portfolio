@@ -38,7 +38,6 @@ export const fetchMessageData = (body) => {
           message: "Message sent succesfully",
         })
       );
-      console.log(data);
     } catch (e) {
       dispatch(
         fetchActions.showFetchInfo({
