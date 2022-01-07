@@ -6,7 +6,7 @@ import List from "../components/lists/List";
 
 const AboutMe = () => {
   const hobbiesContent = DUMMY_HOBBIES.map((hobbie) => (
-    <List key={hobbie.name}>
+    <List key={hobbie.id}>
       <div
         style={{ backgroundImage: `url(${hobbie.imageUrl})` }}
         className={classes["hobbie__photo"]}

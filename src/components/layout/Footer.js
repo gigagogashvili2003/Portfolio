@@ -1,6 +1,6 @@
 import classes from "./Footer.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
-import { DUMMY_SOCIAL_LINKS } from "../../config/config";
+import { DUMMY_SOCIALS } from "../../config/config";
 import { DUMMY_PROJECTS_TITLES } from "../../config/config";
 import { useInView } from "react-intersection-observer";
 // Material UI icon imports
@@ -11,7 +11,7 @@ const Footer = () => {
     navigate("/", { replace: false });
   };
 
-  const socialLinksContent = DUMMY_SOCIAL_LINKS.map((socialLink) => (
+  const socialLinksContent = DUMMY_SOCIALS.map((socialLink) => (
     <li key={socialLink.id}>
       <a href={socialLink.link} target="_blank">
         {socialLink.name}

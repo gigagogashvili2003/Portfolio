@@ -3,7 +3,12 @@ import { DUMMY_SOCIALS } from "../config/config";
 
 const SocialLinks = () => {
   const socialLinksContent = DUMMY_SOCIALS.map((social) => (
-    <a href={social.link} className={classes.socialLinkItem} target="_blank">
+    <a
+      key={social.id}
+      href={social.link}
+      className={classes.socialLinkItem}
+      target="_blank"
+    >
       <h2>{social.name}</h2>
       <p>{social.icon}</p>
 

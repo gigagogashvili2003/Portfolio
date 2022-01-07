@@ -1,0 +1,7 @@
+.projectsList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  justify-content: space-between;
+}
