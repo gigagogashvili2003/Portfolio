@@ -7,8 +7,8 @@ import classes from "./MainNavigation.module.css";
 import { useNavigate } from "react-router-dom";
 // Material UI ICONS
 const navMenuTiming = {
-  enter: 250,
-  exit: 250,
+  enter: 500,
+  exit: 500,
 };
 
 const MainNavigation = () => {

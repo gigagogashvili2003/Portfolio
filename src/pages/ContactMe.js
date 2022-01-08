@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 import ReCAPTCHA from "react-google-recaptcha";
 let recaptchaBoolean = false;
 const ContactMe = () => {
-  const recaptchaKey = "6LdCQPUdAAAAAN__4hjSQwBkl2Khjf98-S2UmzS6";
+  const recaptchaKey = "6LcHNfkdAAAAABIFv8kAqBBYV1Ayt3inE9OsRnMe";
   const [recaptcha, setRecaptcha] = useState(false);
   let recaptchaRef = useRef();
   const [recaptchaToken, setRecaptchaToken] = useState("");

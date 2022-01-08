@@ -80,27 +80,27 @@ export const DUMMY_PROJECTS_TITLES = [
   {
     id: "p1",
     name: "Weather App",
-    link: "ss",
+    path: "/projects/weather-app",
   },
   {
     id: "p2",
     name: "Recipe App",
-    link: "ss",
+    path: "/projects/recipe-app",
   },
   {
     id: "p3",
     name: "Map Project",
-    link: "ss",
+    path: "/projects/map-project",
   },
   {
     id: "p4",
-    name: "Calculator",
-    link: "ss",
+    name: "Modern Website",
+    path: "/projects/modern-website-app",
   },
   {
     id: "p5",
-    name: "Covid19 Stats",
-    link: "ss",
+    name: "Authentication App",
+    path: "/projects/auth-app",
   },
 ];
 
@@ -321,9 +321,9 @@ export const DUMMY_PROJECT_DATAS = [
     websiteLink: "https://recipe-app-e852d.web.app/",
   },
   {
-    name: "Authorization App",
+    name: "Authentication App",
     images: [authImage1, authImage2, authImage3, authImage4],
-    title: "Authorization Application With ReactJS and Css Modules.",
+    title: "Authentication Application With ReactJS and Css Modules.",
     description:
       "It's a pretty simple application where user can, Sign up, Sign in, and Change Password. For the backend i'm using Firebase.",
     path: "auth-app",

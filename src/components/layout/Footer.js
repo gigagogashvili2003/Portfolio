@@ -1,5 +1,5 @@
 import classes from "./Footer.module.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, Link } from "react-router-dom";
 import { DUMMY_SOCIALS } from "../../config/config";
 import { DUMMY_PROJECTS_TITLES } from "../../config/config";
 import { useInView } from "react-intersection-observer";
@@ -20,7 +20,7 @@ const Footer = () => {
   ));
   const ProjectsContent = DUMMY_PROJECTS_TITLES.map((projectTitle) => (
     <li key={projectTitle.id}>
-      <a href={projectTitle.link}>{projectTitle.name}</a>
+      <Link to={projectTitle.path}>{projectTitle.name}</Link>
     </li>
   ));
   const [ref, inView, entry] = useInView({

@@ -9,7 +9,6 @@
   transition: all 0.7s ease-out;
   position: relative;
   transform: translateY(5rem);
-  background-color: lightblue;
 }
 
 .inView {

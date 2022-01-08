@@ -7,7 +7,10 @@ import MainNavigation from "./components/layout/MainNavigation";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./helpers/ScrollToTop";
 import Spinner from "./components/UI/Spinner";
-
+import { Link } from "react-router-dom";
+import classes from "./App.module.css";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import ScrollButton from "./components/UI/ScrollButton";
 // Router component/page imports
 const TechSkills = React.lazy(() => import("./pages/TechSkills"));
 const AboutMe = React.lazy(() => import("./pages/AboutMe"));
@@ -22,6 +25,12 @@ const App = () => {
       <div className="main__navigation">
         <MainNavigation />
       </div>
+      <div className={classes.mailInbox}>
+        <Link to="/contact-me">
+          <MailOutlineIcon style={{ color: "white" }} />
+        </Link>
+      </div>
+      <ScrollButton />
       <ScrollToTop>
         <Suspense fallback={<Spinner />}>
           <Routes>
