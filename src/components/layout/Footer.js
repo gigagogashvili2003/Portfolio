@@ -20,7 +20,7 @@ const Footer = () => {
   ));
   const ProjectsContent = DUMMY_PROJECTS_TITLES.map((projectTitle) => (
     <li key={projectTitle.id}>
-      <Link to={projectTitle.path}>{projectTitle.name}</Link>
+      <Link to={projectTitle}>{projectTitle.name}</Link>
     </li>
   ));
   const [ref, inView, entry] = useInView({
