@@ -1,18 +1,15 @@
 .list {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  margin: 0px 0px 25px 0px;
   /* visibility: hidden;
   opacity: 0; */
-  transition: all 0.7s ease-out;
-  position: relative;
-  transform: translateY(5rem);
+
+  transform: translateY(3rem);
+  opacity: 0;
+  transition: all 0.7s linear;
 }
 
 .inView {
-  opacity: 1;
-  visibility: visible;
   transform: translateY(0rem);
+  opacity: 1;
 }

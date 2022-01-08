@@ -1,5 +1,6 @@
 import classes from "./SocialLinks.module.css";
 import { DUMMY_SOCIALS } from "../config/config";
+import LazyImages from "../components/UI/LazyImages";
 
 const SocialLinks = () => {
   const socialLinksContent = DUMMY_SOCIALS.map((social) => (
@@ -12,7 +13,7 @@ const SocialLinks = () => {
       <h2>{social.name}</h2>
       <p>{social.icon}</p>
 
-      <img src={social.imageUrl} alt={social.name} />
+      <LazyImages src={social.imageUrl} alt={social.name} />
     </a>
   ));
 

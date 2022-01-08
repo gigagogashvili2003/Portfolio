@@ -1,12 +1,12 @@
-import List from "../components/lists/List";
-import TechSkillsList from "../components/lists/TechSkillsList";
+import TechSkillsListItem from "../components/lists/TechSkillsListItem";
 import classes from "./TechSkills.module.css";
 
 import { DUMMY_TECH_SKILLS } from "../config/config";
+import TechSkillsList from "../components/lists/TechSkillsList";
 
 const TechSkills = () => {
   const techSkillsContent = DUMMY_TECH_SKILLS.map((techSkill) => (
-    <TechSkillsList
+    <TechSkillsListItem
       className={classes.listItem}
       key={techSkill.id}
       inview={classes.inView}
@@ -24,7 +24,7 @@ const TechSkills = () => {
         <h1>MY PERSONAL TECH SKILLS</h1>
       </div>
       <div className={classes["techSkills__section2"]}>
-        <List>{techSkillsContent}</List>
+        <TechSkillsList>{techSkillsContent}</TechSkillsList>
       </div>
     </div>
   );

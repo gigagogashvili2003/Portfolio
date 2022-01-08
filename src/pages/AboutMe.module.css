@@ -3,13 +3,18 @@
 }
 .aboutMe__section1 {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   padding: 50px;
 }
-.aboutMe__section1 img {
+
+.aboutMe__section1 span {
   width: 48%;
 }
+.aboutMe__section1 span img {
+  width: 100%;
+}
+
 .aboutMe__titles--container {
   width: 48%;
   padding: 30px;
@@ -17,7 +22,7 @@
   position: relative;
 }
 
-.aboutMe__titles--container img {
+.aboutMe__titles--container span {
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -49,33 +54,14 @@
 .my__hobbies {
   width: 100%;
 }
-
-.hobbie__photo {
-  position: relative;
+.hobbie__photo span {
   width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  margin: 50px 0;
-}
-.hobbie__photo div {
-  position: absolute;
-  z-index: 1;
-  top: 50px;
-  left: 50px;
-
-  color: white;
-}
-
-.hobbie__photo div {
-  width: 40%;
+  height: auto;
 }
 
 .hobbie__photo div h2 {
-  font-weight: bold;
-}
-
-.hobbie__photo div p {
-  font-size: 20px;
-  font-weight: bold;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: white;
 }

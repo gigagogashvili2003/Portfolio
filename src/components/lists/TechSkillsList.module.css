@@ -1,55 +1,7 @@
-.listItem {
-  width: 80%;
-  margin: 20px;
-  padding: 15px;
-
+.techSkillsList {
+  width: 100%;
+  padding: 50px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border: 3px solid rgba(177, 177, 177, 0.2);
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-  border-radius: 15px;
-  position: relative;
-  transition: all 0.7s ease-out;
-  visibility: hidden;
-  opacity: 0;
-
-  height: 25rem;
-  transform: translateY(5rem);
-}
-.inView {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0rem);
-}
-
-.listItem div {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-around;
-  height: 10rem;
-}
-.listItem div h5 {
-  font-family: "Helvetica Now Display DW", sans-serif;
-  font-weight: bold;
-  letter-spacing: -0.01em;
-  color: #0f141e;
-  font-size: 18px;
-}
-
-.listItem img {
-  width: 150px;
-}
-
-.listItem:hover {
-  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.listItem p {
-  color: #878a8f;
-  font-size: 17px;
-  line-height: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }

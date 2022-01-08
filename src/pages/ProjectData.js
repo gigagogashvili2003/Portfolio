@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import classes from "./ProjectData.module.css";
 import { DUMMY_PROJECT_DATAS } from "../config/config";
+import LazyImages from "../components/UI/LazyImages";
 
 const ProjectData = (props) => {
   const { projectName } = useParams();
@@ -9,7 +10,7 @@ const ProjectData = (props) => {
   let imagesContent;
   if (data.images.length > 0) {
     imagesContent = data.images.map((image) => (
-      <img
+      <LazyImages
         key={Math.random()}
         className={`${classes.projectDataImagesContainerImg}`}
         src={image}

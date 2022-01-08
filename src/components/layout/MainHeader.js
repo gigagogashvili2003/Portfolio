@@ -1,6 +1,7 @@
 import classes from "./MainHeader.module.css";
 import myImage from "../../assets/my-image.JPG";
 import { useNavigate } from "react-router-dom";
+import LazyImages from "../UI/LazyImages";
 
 const MainHeader = () => {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ const MainHeader = () => {
           </h5>
         </div>
         <div className={classes["main__header--image"]}>
-          <img src={myImage} alt="My Image" />
+          <LazyImages src={myImage} alt="My Image" />
         </div>
       </div>
     </section>

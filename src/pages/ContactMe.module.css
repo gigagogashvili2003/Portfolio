@@ -30,9 +30,6 @@
   max-width: 600px;
   width: 100%;
   min-height: 600px;
-  background-image: url("../assets/nft.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .contactFormContainer {

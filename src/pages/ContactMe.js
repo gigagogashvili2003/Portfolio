@@ -8,6 +8,10 @@ import { fetchMessageData } from "../store/message-actions";
 import Notification from "../components/UI/Notification";
 import { useInView } from "react-intersection-observer";
 import ReCAPTCHA from "react-google-recaptcha";
+import LazyImages from "../components/UI/LazyImages";
+
+import nftImage from "../assets/nft.jpg";
+
 let recaptchaBoolean = false;
 const ContactMe = () => {
   const recaptchaKey = "6LcHNfkdAAAAABIFv8kAqBBYV1Ayt3inE9OsRnMe";
@@ -153,7 +157,11 @@ const ContactMe = () => {
             work together.
           </h1>
         </div>
-        <div className={classes.contactImage}></div>
+        <LazyImages
+          src={nftImage}
+          className={classes.contactImage}
+          alt="NyBoyNFT"
+        />
       </div>
       <div
         className={`${classes.contactFormContainer} ${
