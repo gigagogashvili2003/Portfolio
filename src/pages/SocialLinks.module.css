@@ -46,7 +46,7 @@
   cursor: pointer;
   opacity: 1;
   position: relative;
-
+  transition: all 0.3s ease-out;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 

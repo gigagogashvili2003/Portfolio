@@ -73,6 +73,10 @@ import ufcImage10 from "../assets/UfcDataImages/ufc-image10.png";
 import ufcImage11 from "../assets/UfcDataImages/ufc-image11.png";
 import ufcImage12 from "../assets/UfcDataImages/ufc-image12.png";
 
+import covidImage1 from "../assets/Covid19DataImages/covid-image1.png";
+import covidImage2 from "../assets/Covid19DataImages/covid-image2.png";
+import covidImage3 from "../assets/Covid19DataImages/covid-image3.png";
+
 export const MESSAGE_URL =
   "https://portfolio-42f27-default-rtdb.firebaseio.com/messages.json";
 
@@ -206,7 +210,7 @@ export const DUMMY_SOCIALS = [
   {
     id: "s2",
     name: "Linkedin",
-    link: "https://www.linkedin.com/in/giga-gogashvili-3989a3208/",
+    link: "https://www.linkedin.com/in/giga-gogashvili-76553322a/",
     imageUrl: laptopOrange,
     icon: <LinkedInIcon />,
   },
@@ -250,34 +254,42 @@ export const DUMMY_PROJECTS = [
   },
   {
     id: "project3",
+    year: "2022 - 2023",
+    name: "Covid 19 Stats",
+    imageUrl: covidImage1,
+    path: "covid19-app",
+  },
+
+  {
+    id: "project4",
     year: "2021 - 2022",
     name: "Authorization APP",
     imageUrl: authImage,
     path: "auth-app",
   },
   {
-    id: "project4",
+    id: "project5",
     year: "2020 - 2021",
     name: "Modern Interactive Website",
     imageUrl: modernWebsiteImage,
     path: "modern-website-app",
   },
   {
-    id: "project5",
+    id: "project6",
     year: "2020 - 2021",
     name: "Map Project",
     imageUrl: mapProjectImage,
     path: "map-project",
   },
   {
-    id: "project6",
+    id: "project7",
     year: "2020 - 2021",
     name: "Discord Clone",
     imageUrl: discordCloneImage,
     path: "discord-clone",
   },
   {
-    id: "project7",
+    id: "project8",
     year: "2020 - 2021",
     name: "Ufc Clone. Only Markup",
     imageUrl: ufcImage,
@@ -319,6 +331,16 @@ export const DUMMY_PROJECT_DATAS = [
     path: "recipe-app",
     creationDate: "November 2021",
     websiteLink: "https://recipe-app-e852d.web.app/",
+  },
+  {
+    name: "Covid 19 Statistics",
+    images: [covidImage1, covidImage2, covidImage3],
+    title: "Covid 19 Statistics Application With ReactJS",
+    description:
+      "This application provides information about current covid 19 statistics in the all countries. columns that are colored green means that, the country is in green zone, cuz (Cases is < 100, Deaths is < 1, and also Recovered is > than totalCases / 2).",
+    path: "covid19-app",
+    creationDate: "January 2022",
+    websiteLink: "https://covid19-14f99.web.app/",
   },
   {
     name: "Authentication App",
