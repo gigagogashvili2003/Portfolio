@@ -108,6 +108,32 @@
   border-bottom: 2px solid rgba(177, 177, 177, 0.5);
 }
 
+.success {
+  color: #28a745;
+  margin-bottom: 15px;
+  animation: success 4s linear forwards;
+}
+
+@keyframes success {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  30% {
+    visibility: visible;
+    opacity: 1;
+  }
+  80% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
 .messageContainer > textarea {
   padding: 14px 0;
   overflow: hidden;
@@ -138,7 +164,7 @@
 
 .buttonContainer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   width: 100%;
   color: black;
   align-items: center;
@@ -146,7 +172,7 @@
 }
 
 .buttonContainer button {
-  width: 30%;
+  width: 50%;
   font-weight: bold;
   outline: none;
   border: none;

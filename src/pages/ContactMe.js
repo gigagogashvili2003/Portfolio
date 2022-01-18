@@ -14,7 +14,7 @@ import nftImage from "../assets/nft.jpg";
 
 let recaptchaBoolean = false;
 const ContactMe = () => {
-  const recaptchaKey = "6LcHNfkdAAAAABIFv8kAqBBYV1Ayt3inE9OsRnMe";
+  const recaptchaKey = "6LcOex8eAAAAAMxc5wuoOTwuUmj1qe_LMXr9BaIk";
   const [recaptcha, setRecaptcha] = useState(false);
   let recaptchaRef = useRef();
   const [recaptchaToken, setRecaptchaToken] = useState("");
@@ -285,6 +285,11 @@ const ContactMe = () => {
           </div>
 
           <div className={buttonClasses.join(" ")}>
+            {messageActions ? (
+              messageActions.status === "success" ? (
+                <p className={classes.success}>Message Sent Succesfully</p>
+              ) : null
+            ) : null}
             <button>Send Message</button>
             {!formIsValid && !recaptcha && recaptchaBoolean && (
               <p className={classes["error-text"]}>
@@ -296,11 +301,6 @@ const ContactMe = () => {
         {messageActions ? (
           messageActions.status === "pending" ? (
             <Spinner />
-          ) : null
-        ) : null}
-        {messageActions ? (
-          messageActions.status === "success" ? (
-            <Notification notificationTitle="Messege sent succesfully ;)" />
           ) : null
         ) : null}
       </div>
