@@ -9,8 +9,8 @@ import CopyrightIcon from "@mui/icons-material/Copyright";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const animationTiming = {
-  enter: 1000,
-  exit: 1000,
+  enter: 400,
+  exit: 400,
 };
 
 const NavLinksContainer = (props) => {

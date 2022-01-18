@@ -46,6 +46,7 @@
   cursor: pointer;
   opacity: 1;
   position: relative;
+
   transition: all 0.3s ease-out;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -60,10 +61,11 @@
   font-family: "Helvetica Now Display DW", sans-serif;
   font-weight: bold;
   letter-spacing: -0.01em;
-  color: white;
   font-size: 22px;
   line-height: 30px;
   text-align: center;
+  z-index: 1;
+  color: white;
   position: absolute;
   top: 10px;
   left: 50%;
@@ -76,14 +78,65 @@
   position: absolute;
   top: 10px;
   left: 10px;
+  z-index: 1;
   color: white;
 }
 
 .socialLinkItem img {
   width: 100%;
+  height: auto;
 }
 
 .socialLinkItem:hover {
   transform: scale(1.03);
   opacity: 0.9;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .socialLinksTitles h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .socialLinksContainer {
+    width: 95%;
+  }
+}
+@media (max-width: 650px) {
+  .socialLinksContainer {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+  .socialLinkItem {
+    width: 100%;
+  }
+  .socialLinksTitles {
+    width: 100%;
+  }
+  .socialLinksTitles h1,
+  .socialLinksTitles p {
+    padding-left: 10px;
+  }
+
+  .socialLinkItem:nth-child(5) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .socialLinksTitles h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .socialLinksTitles h1 {
+    font-size: 23px;
+    line-height: 33px;
+  }
 }

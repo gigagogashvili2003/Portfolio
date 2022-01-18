@@ -152,16 +152,8 @@ const ContactMe = () => {
       <div className={classes.contactTopContainer}>
         <div className={classes.contactTitles}>
           <p>CONTACT</p>
-          <h1>
-            Get in touch — let’s <br />
-            work together.
-          </h1>
+          <h1>Get in touch — let’s work together.</h1>
         </div>
-        <LazyImages
-          src={nftImage}
-          className={classes.contactImage}
-          alt="NyBoyNFT"
-        />
       </div>
       <div
         className={`${classes.contactFormContainer} ${

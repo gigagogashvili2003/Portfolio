@@ -1,4 +1,5 @@
 import { Link, Routes, Route, useParams, useNavigate } from "react-router-dom";
+import LazyImages from "../UI/LazyImages";
 import classes from "./ProjectsListItem.module.css";
 
 const ProjectsListItem = ({ year, name, imageUrl, path }) => {
@@ -15,7 +16,11 @@ const ProjectsListItem = ({ year, name, imageUrl, path }) => {
           <p>{year}</p>
           <h2>{name}</h2>
         </div>
-        <img className={classes.projectImage} width={"100%"} src={imageUrl} />
+        <LazyImages
+          className={classes.projectImage}
+          width={"100%"}
+          src={imageUrl}
+        />
       </div>
     </>
   );

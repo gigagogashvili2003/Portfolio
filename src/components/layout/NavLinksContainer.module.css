@@ -76,11 +76,11 @@
 /* animations */
 
 .navLinksOpen {
-  animation: openNavLinks 1s forwards;
+  animation: openNavLinks 0.4s linear forwards;
 }
 
 .navLinksClosed {
-  animation: closeNavLinks 1s forwards;
+  animation: closeNavLinks 0.4s linear forwards;
 }
 
 @keyframes openNavLinks {
