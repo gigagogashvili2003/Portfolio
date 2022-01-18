@@ -39,7 +39,8 @@
 }
 
 .listItem img {
-  width: 150px;
+  max-width: 150px;
+  width: 100%;
 }
 
 .listItem:hover {
@@ -51,4 +52,26 @@
   color: #878a8f;
   font-size: 17px;
   line-height: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+  .listItem {
+    margin: 15px 0;
+    height: 20rem;
+  }
+  .listItem img {
+    width: 100px;
+  }
+  .listItem p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 350px) {
+  .listItem {
+    margin: 10px 0;
+    height: 17rem;
+  }
 }

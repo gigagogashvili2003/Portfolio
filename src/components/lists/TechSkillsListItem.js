@@ -13,7 +13,7 @@ const TechSkillsListItem = (props) => {
     <div
       ref={ref}
       className={`card ${classes.listItem} ${inView ? classes.inView : ""}`}
-      style={{ width: "18rem", backgroundColor: props.backgroundColor }}
+      style={{ width: "25rem", backgroundColor: props.backgroundColor }}
     >
       <LazyImages
         className="card-img-top"
@@ -31,12 +31,3 @@ const TechSkillsListItem = (props) => {
 };
 
 export default TechSkillsListItem;
-
-// <div className={props.className}>
-//   <div>
-//     <h2>{`${props.name} ${levelContent}`}</h2>
-//     <img src={props.imageUrl} alt={props.name} />
-//   </div>
-//   <p>{props.paragraph}</p>
-//   <h3>Experience: {props.experience}</h3>
-// </div>

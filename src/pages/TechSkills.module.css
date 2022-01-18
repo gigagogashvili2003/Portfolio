@@ -16,3 +16,35 @@
   text-align: center;
   line-height: 70px;
 }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .techSkills__section1 h1 {
+    font-size: 50px;
+    line-height: 65px;
+  }
+}
+@media (max-width: 600px) {
+  .techSkills__section1 h1 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+}
+
+@media (max-width: 500px) {
+  .techSkills__section1 {
+    padding: 50px;
+  }
+
+  .techSkills__section1 h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 470px) {
+  .techSkills__section1 h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
