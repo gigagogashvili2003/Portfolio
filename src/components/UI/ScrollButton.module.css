@@ -24,3 +24,24 @@
   color: white;
   font-size: 35px;
 }
+
+/* responsive */
+
+@media (max-width: 600px) {
+  .scrollToTopButton {
+    width: 45px;
+    height: 45px;
+  }
+  .scrollToTopButton svg {
+    font-size: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .scrollToTopButton {
+    width: 35px;
+    height: 35px;
+  }
+  .scrollToTopButton svg {
+    font-size: 25px;
+  }
+}

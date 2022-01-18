@@ -10,3 +10,20 @@
 
   margin-top: 35px;
 }
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .projectsMainTitle {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projectsMainTitle {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 30px;
+  }
+}

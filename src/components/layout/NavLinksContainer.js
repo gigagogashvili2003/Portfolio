@@ -23,6 +23,14 @@ const NavLinksContainer = (props) => {
     dispatch(classesSliceActions.close());
   };
 
+  // Trash code but i needed it, cuz imnot using sass
+  if (navAction) {
+    document.querySelector("body").style.overflow = "hidden";
+  }
+  if (!navAction) {
+    document.querySelector("body").style.overflow = "unset";
+  }
+
   return (
     <Transition
       in={navAction}
@@ -39,6 +47,7 @@ const NavLinksContainer = (props) => {
             ? classes.navLinksClosed
             : null,
         ];
+
         return (
           <div
             onClick={closeNavigationHandler}

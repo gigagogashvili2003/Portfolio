@@ -5,3 +5,22 @@
   padding: 50px;
   justify-content: space-between;
 }
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .projectsList {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .projectsList {
+    padding: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .projectsList {
+    padding: 15px;
+  }
+}

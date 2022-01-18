@@ -11,101 +11,85 @@ const Footer = () => {
     navigate("/", { replace: false });
   };
 
-  const socialLinksContent = DUMMY_SOCIALS.map((socialLink) => (
-    <li key={socialLink.id}>
-      <a href={socialLink.link} target="_blank">
-        {socialLink.name}
+  const socalLinksContent = DUMMY_SOCIALS.map((social) => {
+    return (
+      <a key={social.id} href={social.link} target="_blank">
+        {social.name}
       </a>
-    </li>
-  ));
-  const ProjectsContent = DUMMY_PROJECTS_TITLES.map((projectTitle) => (
-    <li key={projectTitle.id}>
-      <Link to={projectTitle.path}>{projectTitle.name}</Link>
-    </li>
-  ));
-  const [ref, inView, entry] = useInView({
-    /* Optional options */
-    threshold: 0.2,
+    );
+  });
+
+  const projectsContent = DUMMY_PROJECTS_TITLES.map((project) => {
+    return (
+      <NavLink key={project.id} to={project.path}>
+        {project.name}
+      </NavLink>
+    );
   });
 
   return (
-    <footer
-      ref={ref}
-      className={`${classes.footer} ${inView ? classes.inView : ""}`}
-    >
-      <div className={classes["footer__top--titles"]}>
-        <p>NEED A JUNIOUR FRONT END DEVELOPER ?</p>
+    <div className={classes.footer}>
+      <div className={classes.footerTopContainer}>
+        <p>NEED A JUNIOR FRONTEND DEVELOPER?</p>
         <h1>
-          <NavLink style={{ opacity: 1 }} to="/contact-me">
-            Let's work together
-            <span>
-              <EastIcon style={{ fontSize: "50px" }} />
-            </span>
-          </NavLink>
+          <NavLink to="/contact-me">LET'S WORK TOGETHER</NavLink>
         </h1>
       </div>
-      <div className={classes["footer__bottom--container"]}>
-        <div className={classes["footer__bottomTop--container"]}>
-          <div className={classes.contactInformationTitles}>
-            <h3>
-              Contact <br /> Infromation
-            </h3>
 
+      <div className={classes.footerBottomContainer}>
+        <div className={classes["footer__contact--information"]}>
+          <div className={classes["footer__titles--blocks"]}>
+            <h3>
+              Contact <br /> Information
+            </h3>
+          </div>
+          <div className={classes["footer__actual--content"]}>
             <p>
               Feel free to reach out to me any time. I prefer to talk over
-              <br />
               email, especially since we may be a few time zones away.
             </p>
             <h4>
-              E:
-              <span>
-                <a href="mailto:businessgogashvili@gmail.com">
-                  businessgogashvili@gmail.com
-                </a>
-              </span>
+              <span>Phone:</span>{" "}
+              <a href="tel:+995 551 907 657">+995 551 907 657</a>
             </h4>
             <h4>
-              P:
-              <span>
-                <a href="tel:551-907-657">+995 551 907 657</a>
-              </span>
+              <span>Email:</span>{" "}
+              <a href="mailto:thegogashvili@gmail.com">
+                thegogashvili@gmail.com
+              </a>
             </h4>
           </div>
-          <div className={classes["footer__projects"]}>
+        </div>
+        <div className={classes["footer__latest--projects"]}>
+          <div className={classes["footer__titles--blocks"]}>
             <h3>
-              Latest <br />
-              projects
+              Latest <br /> Projects
             </h3>
-            <ul>{ProjectsContent}</ul>
           </div>
-          <div className={classes["avilability__title--footer"]}>
-            <h3>
-              Current <br />
-              avilability
-            </h3>
-            <p>
-              I’ll be happy to discuss new opportunities. Let’s get in touch!
-            </p>
-          </div>
-          <div className={classes["social__links--footer"]}>
-            <h3>
-              Follow <br />
-              me on
-            </h3>
-            <ul>{socialLinksContent}</ul>
+          <div className={classes["latest__projects--actualContent"]}>
+            {projectsContent}
           </div>
         </div>
-        <div className={`${classes.logoGreyVersion}`}>
-          <div onClick={scrollToTopHandler} className={classes.logoImageGrey}>
-            G
+        <div className={classes["footer__social--links"]}>
+          <div className={classes["footer__titles--blocks"]}>
+            <h3>
+              Social <br /> Links
+            </h3>
           </div>
+          <div className={classes["social__links--actualContent"]}>
+            {socalLinksContent}
+          </div>
+        </div>
+        <div onClick={scrollToTopHandler} className={classes.logo}>
+          {/* <img src={myLogo} alt="Logo" /> */}
+          <div className={classes.logoImage}>G</div>
           <div className={`${classes["logo__name"]}`}>
-            <h2>2021 - 2022 Giga Gogashvili</h2>
-            <p>Made with in Georgia, Tbilisi</p>
+            <h2>© 2021 — 2020 Giga Gogashvili.</h2>
+            <p>Made with in Georgia, Tbilisi.</p>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

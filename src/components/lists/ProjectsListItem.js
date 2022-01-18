@@ -1,22 +1,22 @@
-import { Link, Routes, Route, useParams } from "react-router-dom";
+import { Link, Routes, Route, useParams, useNavigate } from "react-router-dom";
 import classes from "./ProjectsListItem.module.css";
 
 const ProjectsListItem = ({ year, name, imageUrl, path }) => {
+  const navigate = useNavigate();
+
+  const navigateToProject = () => {
+    navigate(path, { replace: false });
+  };
+
   return (
     <>
-      <Link to={path} className={classes.projectItem}>
-        <div
-          className={classes.projectImage}
-          style={{
-            backgroundImage: `url(${imageUrl})`,
-          }}
-        >
-          <div className={classes.projectItemTitles}>
-            <p>{year}</p>
-            <h2>{name}</h2>
-          </div>
+      <div onClick={navigateToProject} className={classes.projectItem}>
+        <div className={classes.projectItemTitles}>
+          <p>{year}</p>
+          <h2>{name}</h2>
         </div>
-      </Link>
+        <img className={classes.projectImage} width={"100%"} src={imageUrl} />
+      </div>
     </>
   );
 };

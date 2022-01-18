@@ -4,14 +4,14 @@
 
 .main__header--wrapper {
   width: 100%;
-  height: 100vh;
   display: flex;
   padding: 2.2rem 2.2rem 0 2.2rem;
   justify-content: space-between;
   align-items: center;
 }
 .main__header--image img {
-  height: 600px;
+  width: 100%;
+  height: auto;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 15px;
 }
@@ -77,4 +77,119 @@
 .readAboutMe:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .main__header--titles h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .main__header--titles p {
+    font-size: 16px;
+  }
+
+  .main__header--image {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .main__header--titles h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 870px) {
+  .main__header--wrapper {
+    padding-top: 50px;
+    flex-direction: column;
+  }
+  .main__header--titles {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .main__header--titles p {
+    font-size: 18px;
+  }
+  .main__header--titles h1 {
+    font-size: 70px;
+    line-height: 80px;
+  }
+
+  .main__header--image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 730px) {
+  .main__header--titles h1 {
+    font-size: 55px;
+    line-height: 65px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main__header--titles p {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  .main__header--titles h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .main__header--titles h4 {
+    font-size: 12px;
+  }
+
+  .main__header--titles h5 span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main__header--titles p {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .main__header--titles h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .main__header--titles h4 {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  .main__header--titles h5 span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 400px) {
+  .main__header--wrapper {
+    padding: 1.5rem 1.5rem 0rem 1.5rem;
+  }
+
+  .main__header--titles p {
+    font-size: 12px;
+  }
+
+  .main__header--titles h1 {
+    font-size: 25px;
+
+    line-height: 30px;
+  }
+  .main__header--titles h4 {
+    font-size: 10.5px;
+    margin-bottom: 5px;
+  }
+
+  .main__header--titles h5 span {
+    font-size: 12px;
+  }
 }

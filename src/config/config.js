@@ -249,7 +249,7 @@ export const DUMMY_PROJECTS = [
     id: "project2",
     year: "2020 - 2021",
     name: "Recipe APP",
-    imageUrl: recipeImage,
+    imageUrl: recipeImage1,
     path: "recipe-app",
   },
   {
