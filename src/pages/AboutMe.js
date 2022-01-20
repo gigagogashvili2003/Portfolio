@@ -1,10 +1,9 @@
 import classes from "./AboutMe.module.css";
-import myImage2 from "../assets/my__image2.jpg";
-import myImageBad from "../assets/my__image2__bad.jpg";
 import myFlip from "../assets/myflip.jpg";
 import { DUMMY_HOBBIES } from "../config/config";
 import List from "../components/lists/List";
 import LazyImages from "../components/UI/LazyImages";
+import myImage from "../assets/my-image.JPG";
 
 const AboutMe = () => {
   const hobbiesContent = DUMMY_HOBBIES.map((hobbie) => (
@@ -26,7 +25,6 @@ const AboutMe = () => {
   return (
     <div className={classes["about__me--container"]}>
       <section className={`${classes["aboutMe__section1"]}`}>
-        <LazyImages src={myImage2} className={`${classes.myImage2}`} />
         <div className={classes["aboutMe__titles--container"]}>
           <h1>About me</h1>
           <p>
@@ -40,15 +38,18 @@ const AboutMe = () => {
             moment I have not any working experience on real projects, So I will
             be happy if you decide to work with me. 🙂
           </p>
+        </div>
+        <div className={classes["aboutMe__images--container"]}>
           <LazyImages
             className={classes.myFlip}
             src={myFlip}
             alt="My Flip Photo"
           />
+          <LazyImages className={classes.myImage2} src={myImage} />
         </div>
       </section>
       <section className={classes["aboutMe__section2"]}>
-        <h2>MY HOBBIES</h2>
+        <h1>My Hobbies</h1>
         <div className={classes["my__hobbies"]}>{hobbiesContent}</div>
       </section>
     </div>

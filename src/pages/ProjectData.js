@@ -8,7 +8,7 @@ const ProjectData = (props) => {
 
   const data = DUMMY_PROJECT_DATAS.find((data) => data.path === projectName);
   let imagesContent;
-  if (data.images.length > 0) {
+  if (data && data.images && data.images.length > 0) {
     imagesContent = data.images.map((image) => (
       <LazyImages
         key={Math.random()}
@@ -20,29 +20,54 @@ const ProjectData = (props) => {
     imagesContent = <p className={classes.imageNotFound}>Images Not Found!</p>;
   }
 
-  const projectDataContent = (
-    <div className={classes.projectDataContainer}>
-      <div className={classes.projectDataContainerTop}>
-        <div className={classes.projectDataContainerLeft}>
-          <p>{data.name ? data.name : ""}</p>
-          <h2>{data.title ? data.title : ""}</h2>
+  let projectDataContent;
+
+  if (data) {
+    projectDataContent = (
+      <div className={classes.projectDataContainer}>
+        <div className={classes.projectDataContainerTop}>
+          <div className={classes.projectDataContainerLeft}>
+            <p>{data.name ? data.name : ""}</p>
+            <h2>{data.title ? data.title : ""}</h2>
+          </div>
+          <div className={classes.projectDataContainerRight}>
+            <p>{data.description ? data.description : ""}</p>
+            <p>
+              Date Created: {data.creationDate ? data.creationDate : "Unknow"}
+            </p>
+            <p>
+              Link:
+              <a
+                href={data.websiteLink ? data.websiteLink : ""}
+                target="_blank"
+              >
+                {data.websiteLink
+                  ? data.websiteLink
+                  : "Project Isn't Done Yet."}
+              </a>
+            </p>
+          </div>
         </div>
-        <div className={classes.projectDataContainerRight}>
-          <p>{data.description ? data.description : ""}</p>
-          <p>
-            Date Created: {data.creationDate ? data.creationDate : "Unknow"}
-          </p>
-          <p>
-            Link:
-            <a href={data.websiteLink ? data.websiteLink : ""} target="_blank">
-              {data.websiteLink ? data.websiteLink : "Project Isn't Done Yet."}
-            </a>
-          </p>
+        <div className={classes.projectDataImagesContainer}>
+          {imagesContent}
         </div>
       </div>
-      <div className={classes.projectDataImagesContainer}>{imagesContent}</div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <p
+        style={{
+          fontSize: "40px",
+          color: "darkred",
+          fontWeight: "bold",
+          textAlign: "center",
+          marginTop: "100px",
+        }}
+      >
+        Page Not Found!
+      </p>
+    );
+  }
 
   return <>{projectDataContent}</>;
 };

@@ -1,4 +1,4 @@
-import { Link, Routes, Route, useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import LazyImages from "../UI/LazyImages";
 import classes from "./ProjectsListItem.module.css";
 

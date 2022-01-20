@@ -1,43 +1,47 @@
 .about__me--container {
   width: 100%;
 }
+
 .aboutMe__section1 {
-  display: flex;
-  justify-content: space-around;
   width: 100%;
+}
+
+.aboutMe__images--container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   padding: 50px;
 }
 
-.aboutMe__section1 span {
-  width: 48%;
-}
-.aboutMe__section1 span img {
-  width: 100%;
-}
-
 .aboutMe__titles--container {
-  width: 48%;
-  padding: 30px;
-  margin-top: 50px;
-  position: relative;
+  padding: 50px;
 }
 
-.aboutMe__titles--container span {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
-
-.about__me--container h1 {
-  font-weight: bold;
+.aboutMe__section1 h1 {
+  font-family: "Helvetica Now Display DW", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #0f141e;
   font-size: 50px;
-  margin-bottom: 50px;
-  margin-top: 60px;
+  line-height: 60px;
+  margin-bottom: 40px;
 }
+
 .aboutMe__section1 p {
-  font-size: 18px;
-  line-height: 23px;
   color: #878a8f;
+  font-family: "Helvetica Now Display DW", sans-serif;
+
+  letter-spacing: -0.01em;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.myImage2 {
+  width: 97%;
+}
+.myFlip {
+  width: 97%;
 }
 
 .aboutMe__section2 {
@@ -46,10 +50,14 @@
   flex-direction: column;
   padding: 50px;
 }
-.aboutMe__section2 h2 {
-  margin-bottom: 50px;
-  font-size: 40px;
-  font-weight: bold;
+.aboutMe__section2 h1 {
+  font-family: "Helvetica Now Display DW", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #0f141e;
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 60px;
 }
 .my__hobbies {
   width: 100%;
@@ -60,10 +68,83 @@
 }
 
 .hobbie__photo div h2 {
+  font-family: "Helvetica Now Display DW", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: white;
+  font-size: 40px;
+  line-height: 50px;
+  margin-bottom: 60px;
   position: absolute;
   top: 2rem;
   left: 2rem;
-  color: white;
 }
 
 /* Responsive */
+
+@media (max-width: 600px) {
+  .aboutMe__titles--container h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .aboutMe__titles--container p {
+    font-size: 16px;
+  }
+
+  .aboutMe__images--container {
+    flex-direction: column;
+  }
+  .myImage2,
+  .myFlip {
+    width: 100%;
+  }
+
+  .aboutMe__images--container,
+  .aboutMe__titles--container,
+  .aboutMe__section2 {
+    padding: 25px;
+  }
+  .aboutMe__section2 h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .aboutMe__section2 {
+    margin-top: 40px;
+  }
+
+  .hobbie__photo div h2 {
+    font-size: 30px;
+    line-height: 40px;
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .aboutMe__titles--container p {
+    font-size: 15px;
+  }
+
+  .aboutMe__titles--container h1,
+  .aboutMe__section2 h1 {
+    font-size: 35px;
+  }
+  .hobbie__photo div h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .aboutMe__titles--container p {
+    font-size: 13.5px;
+  }
+  .aboutMe__titles--container h1,
+  .aboutMe__section2 h1 {
+    font-size: 30px;
+  }
+  .hobbie__photo div h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
