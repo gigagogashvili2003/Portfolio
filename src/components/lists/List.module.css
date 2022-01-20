@@ -1,15 +1,30 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .list {
   width: 100%;
   margin: 0px 0px 25px 0px;
   /* visibility: hidden;
   opacity: 0; */
 
+  -webkit-transform: translateY(3rem);
+
+  -ms-transform: translateY(3rem);
+
   transform: translateY(3rem);
   opacity: 0;
+  -webkit-transition: all 0.7s linear;
+  -o-transition: all 0.7s linear;
   transition: all 0.7s linear;
 }
 
 .inView {
+  -webkit-transform: translateY(0rem);
+  -ms-transform: translateY(0rem);
   transform: translateY(0rem);
   opacity: 1;
 }

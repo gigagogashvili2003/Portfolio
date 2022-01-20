@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .projectItem {
   border-radius: 15px;
   width: 100%;
   font-size: 25px;
   height: auto;
   margin: 30px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: relative;
   top: 0;
@@ -40,6 +48,8 @@
   left: 0;
   z-index: 1;
   opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
   border-radius: 15px;
   background: rgba(15, 20, 30, 0.9);
@@ -77,24 +87,52 @@
 .projectItem:hover .projectItemTitles {
   color: white;
   z-index: 2;
+  -webkit-animation: move 0.2s linear;
   animation: move 0.2s linear;
+}
+
+@-webkit-keyframes move {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+    transform: translateY(3rem);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+    transform: translateY(3rem);
+  }
+  60% {
+    opacity: 0;
+    -webkit-transform: translateY(3rem);
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+    transform: translateY(0rem);
+  }
 }
 
 @keyframes move {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(3rem);
     transform: translateY(3rem);
   }
   50% {
     opacity: 0;
+    -webkit-transform: translateY(3rem);
     transform: translateY(3rem);
   }
   60% {
     opacity: 0;
+    -webkit-transform: translateY(3rem);
     transform: translateY(3rem);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0rem);
     transform: translateY(0rem);
   }
 }

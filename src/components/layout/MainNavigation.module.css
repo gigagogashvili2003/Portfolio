@@ -1,18 +1,37 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .main__navigation {
   padding: 20px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
   z-index: 13;
 }
 
 .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 5px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
 }
 
@@ -22,8 +41,14 @@
   background-color: white;
   border-radius: 50%;
   border: 3px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-weight: bold;
   font-size: 35px;
@@ -49,11 +74,19 @@
 }
 
 .nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   cursor: pointer;
   padding: 10px;
+  -webkit-transition: opacity 0.25s ease-out;
+  -o-transition: opacity 0.25s ease-out;
   transition: opacity 0.25s ease-out;
 }
 
@@ -67,12 +100,20 @@
 
 .burger__menu {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 40px;
   height: 40px;
   cursor: pointer;
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 .burger {
@@ -80,7 +121,10 @@
   height: 4px;
   background-color: black;
   border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 .burger::before {
@@ -91,7 +135,10 @@
   height: 4px;
   background-color: black;
   border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
@@ -103,14 +150,21 @@
   height: 4px;
   background-color: black;
   border-radius: 5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
 .burger::before {
+  -webkit-transform: translateY(-16px);
+  -ms-transform: translateY(-16px);
   transform: translateY(-16px);
 }
 .burger::after {
+  -webkit-transform: translateY(16px);
+  -ms-transform: translateY(16px);
   transform: translateY(16px);
 }
 
@@ -120,15 +174,22 @@
 }
 
 .burger__menu.burgerOpen .burger {
+  -webkit-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
   transform: translateX(-50px);
   background: transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .burger__menu.burgerOpen .burger::before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+  -ms-transform: rotate(45deg) translate(35px, -35px);
   transform: rotate(45deg) translate(35px, -35px);
   top: 0;
 }
 .burger__menu.burgerOpen .burger::after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+  -ms-transform: rotate(-45deg) translate(35px, 35px);
   transform: rotate(-45deg) translate(35px, 35px);
   bottom: 0;
 }
@@ -137,11 +198,15 @@
 
 .navMenuWhite h3 {
   color: white;
+  -webkit-transition: color 0.25s;
+  -o-transition: color 0.25s;
   transition: color 0.25s;
 }
 
 .navMenuBlack h3 {
   color: black;
+  -webkit-transition: color 0.25s;
+  -o-transition: color 0.25s;
   transition: color 0.25s;
 }
 
@@ -157,12 +222,16 @@
 .logoMenuWhite h2,
 .logoMenuWhite p {
   color: white;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
   transition: color 0.5s;
 }
 
 .logoMenuBlack h2,
 .logoMenuBlack p {
   color: black;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
   transition: color 0.5s;
 }
 
@@ -170,6 +239,8 @@
   background-color: transparent;
   border: 3px solid white;
   color: white;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -177,6 +248,8 @@
   background-color: white;
   border: 3px solid black;
   color: black;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
   transition: all 0.25s;
 }
 

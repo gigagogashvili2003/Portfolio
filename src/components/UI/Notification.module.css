@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .Notification {
   width: 30%;
   color: white;
@@ -10,8 +17,30 @@
   position: fixed;
   top: 0;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  -webkit-animation: notification 10s forwards;
   animation: notification 10s forwards;
+}
+
+@-webkit-keyframes notification {
+  0% {
+    top: -100%;
+    visibility: none;
+  }
+  15% {
+    top: 0;
+    visibility: visible;
+  }
+  85% {
+    top: 0;
+    visibility: visible;
+  }
+  100% {
+    top: -100%;
+    visibility: hidden;
+  }
 }
 
 @keyframes notification {

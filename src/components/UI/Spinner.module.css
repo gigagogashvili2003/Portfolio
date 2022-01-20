@@ -1,5 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .loader::before {
+  -webkit-animation: 0.5s linear infinite spinner;
   animation: 0.5s linear infinite spinner;
+  -webkit-animation-play-state: inherit;
   animation-play-state: inherit;
   border: solid 5px #cfd0d1;
   border-bottom-color: #1c87c9;
@@ -9,16 +18,30 @@
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
   width: 40px;
   will-change: transform;
 }
 
-@keyframes spinner {
+@-webkit-keyframes spinner {
   0% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
     transform: translate3d(-50%, -50%, 0) rotate(0deg);
   }
   100% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
     transform: translate3d(-50%, -50%, 0) rotate(360deg);
   }
 }
